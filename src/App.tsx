@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Articles from "./features/Articles.tsx";
 
 import './App.css'
 
@@ -12,11 +13,7 @@ function App() {
                   Solutions for people like you
               </h1>
           </header>
-        <section className='first-article'>
-            <h2 className='section-name'>
-                Category | Marketing
-            </h2>
-        </section>
+        <Articles/>
         </body>
       </>
   )

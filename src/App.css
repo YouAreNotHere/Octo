@@ -17,6 +17,11 @@
   src: url('fonts/NotoSans-Medium.ttf') format('ttf');
 }
 
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 body{
   width: 320px;
@@ -47,17 +52,22 @@ body{
   margin: auto;
 }
 
-.first-article{
-  width: 290px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 16px 16px 20px 16px;
-  border: 1px #D3D8E4 solid;
-  position: relative;
+.article-list{
+  margin-top: 20px;
 }
 
-.section-name{
-  background-color: #00B6DD;
+.article{
+  width: 290px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 16px 16px 20px 16px;
+  border: 0.1px #D3D8E4 solid;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.odd-section-name,
+.even-section-name{
   width: 190px;
   height: 32px;
   position: absolute;
@@ -77,6 +87,107 @@ body{
   text-decoration-skip-ink: none;
   color: white;
   margin: 0;
-  /*Сделать uppercase*/
+  text-transform: uppercase;
 }
 
+.odd-section-name{
+  background-color: #00B6DD;
+}
+
+.even-section-name{
+  background-color: #081580;
+}
+
+.odd-article-img,
+.even-article-img{
+  width: 258px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+.odd-article-img{
+  background-color: #D3D8E4;
+}
+
+.even-article-img{
+  background-color: #FF779A;
+}
+
+.odd-author-name,
+.even-author-name{
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.800000011920929px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin: 12px 0 6px 0;
+  height: 18px;
+}
+
+.odd-author-name{
+  color: #00B6DD;
+}
+
+.even-author-name{
+  color: #081580;
+}
+
+.article-header{
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  /*Что-то решить со шрифтом, чтобы был как на макете*/
+
+  width: 258px;
+  height: 104px;
+  margin: 0 0 10px 0;
+}
+
+.article-text{
+  width: 258px;
+  height: 66px;
+  margin: 0 0 20px 0;
+
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.6000000238418579px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #010101;
+}
+
+.odd-article-button,
+.even-article-button{
+  width: 140px;
+  height: 36px;
+  border-radius: 0;
+
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.800000011920929px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+}
+
+.odd-article-button{
+  background-color: #00B6DD;
+}
+
+.even-article-button{
+  background-color: #081580;
+}
