@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import Articles from "./features/Articles.tsx";
+import Articles from "./features/articles/Articles.tsx";
+import Advertisement from "./features/advertisement/Advertisement.tsx";
+import Slider from "./features/slider/Slider.tsx";
 
 import './App.css'
 
@@ -13,7 +14,10 @@ function App() {
                   Solutions for people like you
               </h1>
           </header>
-        <Articles/>
+        <Articles order={"first"}/>
+        <Advertisement/>
+        <Articles order={"second"}/>
+        <Slider/>
         </body>
       </>
   )

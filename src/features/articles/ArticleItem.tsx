@@ -1,4 +1,5 @@
-import ArticleI from "./types/ArticleI.ts";
+import ArticleI from "../types/ArticleI.ts";
+import "./Articles.css"
 
 const ArticleItem = ({articleNumber, sectionName, authorName, articleHeader, articleText}: ArticleI) => {
     return(
