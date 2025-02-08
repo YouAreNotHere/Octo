@@ -21,6 +21,12 @@ $widescreen-width: 1200px;
     grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
     margin-bottom: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+    grid-template-columns: repeat(auto-fill, minmax(454px, 1fr));
+    margin-bottom: 80px;
+  }
 }
 
 .first-article-list li:nth-child(3),
@@ -44,8 +50,12 @@ $widescreen-width: 1200px;
     margin-bottom: 20px;
   }
 
-  @media (min-width: $note-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
   }
 }
 
@@ -65,8 +75,13 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     width: 345px;
     height: 440px;
-    margin: 0 0 0 0;
     padding: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 455px;
+    height: 470px;
+    padding: 30px;
   }
 }
 
@@ -98,6 +113,13 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     top: 12px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 13px;
+    line-height: 22px;
+    width: 208px;
+    height: 36px;
+  }
 }
 
 .first-section-name,
@@ -128,6 +150,11 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     width: 289px;
     height: 150px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 395px;
+    height: 170px;
   }
 }
 
@@ -164,6 +191,17 @@ $widescreen-width: 1200px;
 
   @media (min-width: $tablet-width) {
     margin: 16px 0 6px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 20px 0 6px 0;
+    width: 96px;
+    height: 20px;
+
+    font-family: Noto Sans;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.800000011920929px;
   }
 }
 
@@ -202,6 +240,15 @@ $widescreen-width: 1200px;
     text-overflow: ellipsis;
     overflow: hidden;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 395px;
+    height: 56px;
+    margin: 0 0 16px 0;
+
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .article-text{
@@ -231,6 +278,15 @@ $widescreen-width: 1200px;
     height: 66px;
     margin-bottom: 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 395px;
+    height: 52px;
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 .first-article-button,
@@ -250,6 +306,14 @@ $widescreen-width: 1200px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: white;
+
+  @media (min-width: $desktop-width) {
+    width: 160px;
+    height: 40px;
+
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 .first-article-button,

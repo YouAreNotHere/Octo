@@ -14,6 +14,10 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     margin-bottom: 60px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
 }
 .advertisement-section{
   width: 90%;
@@ -30,6 +34,13 @@ $widescreen-width: 1200px;
   @media (min-width: $note-width) {
     width: 78%;
     padding: 70px 0 70px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 95%;
+    padding: 80px 0 80px 0;
+    justify-content: space-between;
   }
 }
 
@@ -56,6 +67,15 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     width: 595px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 455px;
+    height: 120px;
+    text-align: start;
+
+    font-size: 54px;
+    line-height: 60px;
+  }
 }
 
 .advertisement-body{
@@ -77,12 +97,41 @@ $widescreen-width: 1200px;
   @media (min-width: $tablet-width) {
     height: 52px;
   }
+
+  @media (min-width: $desktop-width) {
+    height: 84px;
+    width: 455px;
+
+    font-size: 20px;
+    line-height: 28px;
+    text-align: start;
+  }
+}
+
+.text-and-buttons-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  @media (min-width: $note-width) {
+    width: 455px;
+    height: 294px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+  }
 }
 
 .buttons-wrapper{
   @media (min-width: $note-width) {
     display: flex;
     align-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-self: start;
   }
 }
 
@@ -109,6 +158,14 @@ $widescreen-width: 1200px;
     width: 140px;
     height: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    height: 40px;
+
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 .first-advertisement-button{
@@ -130,5 +187,11 @@ $widescreen-width: 1200px;
 
   @media (min-width: $note-width) {
     margin: 40px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 455px;
+    height: 332px;
+    margin: 0 0 0 30px;
   }
 }

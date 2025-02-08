@@ -70,6 +70,11 @@ img{
     height: 276px;
     margin-bottom: 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    height: 340px;
+    margin-bottom: 80px;
+  }
 }
 
 .header:after {
@@ -89,6 +94,10 @@ img{
 
   @media (min-width: $tablet-width) {
     height: 276px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 340px;
   }
 }
 
@@ -111,5 +120,10 @@ img{
   @media (min-width: $note-width) {
     width: 450px;
     height: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 617px;
+    height: 120px;
   }
 }
