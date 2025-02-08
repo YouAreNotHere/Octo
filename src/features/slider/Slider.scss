@@ -1,0 +1,47 @@
+$note-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$widescreen-width: 1200px;
+
+.slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (min-width: $note-width) {
+    justify-content: start;
+    width: 546px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 720px;
+    margin-bottom: 60px;
+  }
+}
+
+.slider__button{
+  width: 11px;
+  height: 22px;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 13px;
+    height: 26px;
+  }
+}
+
+.slider__button svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider__button:nth-child(1){
+  margin: 0 18px 0 0;
+}

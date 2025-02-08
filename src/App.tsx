@@ -2,7 +2,7 @@ import Articles from "./features/articles/Articles.tsx";
 import Advertisement from "./features/advertisement/Advertisement.tsx";
 import Slider from "./features/slider/Slider.tsx";
 
-import './App.css'
+import './App.scss'
 
 function App() {
 

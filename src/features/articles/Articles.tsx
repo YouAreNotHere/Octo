@@ -1,7 +1,7 @@
 import {useState} from "react";
 import ArticleI from "../types/ArticleI.ts";
 import ArticleItem from "./ArticleItem.tsx";
-import './Articles.css'
+import './Articles.scss'
 
 const Articles = ({order}: {order: string}) => {
     const sectionName:string = "Category | Marketing";
@@ -10,28 +10,28 @@ const Articles = ({order}: {order: string}) => {
     const articleText:string = "How can we help your technology and services business develop a revenue engine based…";
 
     const initialState :ArticleI[] = [
-        {articleNumber : "odd",
+        {articleNumber : "first",
         sectionName,
         authorName,
         articleHeader,
         articleText,
         },
 
-        {articleNumber : "even",
+        {articleNumber : "second",
             sectionName,
             authorName,
             articleHeader,
             articleText,
         },
 
-        {articleNumber : "odd",
+        {articleNumber : "third",
             sectionName,
             authorName,
             articleHeader,
             articleText,
         },
 
-        {articleNumber : "even",
+        {articleNumber : "fourth",
             sectionName,
             authorName,
             articleHeader,

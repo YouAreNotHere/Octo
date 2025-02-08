@@ -13,6 +13,11 @@
   --widescreen-width: 1200px;
 }
 
+$note-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$widescreen-width: 1200px;
+
 @font-face {
   font-family: "Noto Sans";
   font-style: normal;
@@ -38,17 +43,11 @@ ul{
 }
 
 body{
-  width: 320px;
-  margin: auto;
-  
-  /*@media (min-width: var(--note-width)) {*/
-  /*  width: var(--note-width);*/
-  /*}*/
+  width: 100%;
+}
 
-  @media (min-width: 576px) {
-    width: var(--note-width);
-    background-color: red;
-  }
+img{
+  max-width: 100%;
 }
 
 .header{
@@ -56,10 +55,21 @@ body{
   height: 274px;
   background-color: blanchedalmond;
   background-image: url('assets/HeaderBackground.jpg');
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 50px;
+
+  @media (min-width: $note-width) {
+    height: 236px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 276px;
+    margin-bottom: 50px;
+  }
 }
 
 .header:after {
@@ -72,6 +82,14 @@ body{
   height: 274px;
   background: rgba(0,0,0,.6);
   z-index: 2;
+
+  @media (min-width: $note-width) {
+    height: 236px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 276px;
+  }
 }
 
 .header-title{
@@ -89,4 +107,9 @@ body{
   width: 290px;
   margin: auto;
   z-index: 3;
+
+  @media (min-width: $note-width) {
+    width: 450px;
+    height: 96px;
+  }
 }
