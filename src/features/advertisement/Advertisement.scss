@@ -15,32 +15,70 @@ $widescreen-width: 1200px;
     margin-bottom: 60px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 80px;
   }
+
+  @media (min-width: $widescreen-width) {
+    margin-bottom: 100px;
+  }
 }
+
 .advertisement-section{
-  width: 90%;
+  width: 290px;
   padding: 50px 0 50px 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 
   @media (min-width: $note-width) {
-    width: 78%;
+    width: 450px;
     padding: 60px 0 60px 0;
   }
 
-  @media (min-width: $note-width) {
-    width: 78%;
+  @media (min-width: $tablet-width) {
+    width: 596px;
     padding: 70px 0 70px 0;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    width: 95%;
+    width: 940px;
     padding: 80px 0 80px 0;
     justify-content: space-between;
+  }
+
+  @media (min-width: $widescreen-width) {
+    width: 1140px;
+    padding: 100px 0 100px 0;
+  }
+}
+
+.text-and-buttons-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  @media (min-width: $note-width) {
+    width: 455px;
+    height: 294px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 595px;
+    height: 228px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+    width: 455px;
+    height: 294px;
+  }
+
+  @media (min-width: $widescreen-width) {
+    margin-top: 26px;
+    width: 555px;
+    height: 328px;
   }
 }
 
@@ -76,6 +114,14 @@ $widescreen-width: 1200px;
     font-size: 54px;
     line-height: 60px;
   }
+
+  @media (min-width: $widescreen-width) {
+    width: 555px;
+    height: 136px;
+
+    font-size: 62px;
+    line-height: 68px;
+  }
 }
 
 .advertisement-body{
@@ -106,20 +152,14 @@ $widescreen-width: 1200px;
     line-height: 28px;
     text-align: start;
   }
-}
 
-.text-and-buttons-wrapper{
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  @media (min-width: $widescreen-width) {
+    height: 90px;
+    width: 555px;
 
-  @media (min-width: $note-width) {
-    width: 455px;
-    height: 294px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 23px;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 22px 0 40px 0;
   }
 }
 
@@ -130,7 +170,10 @@ $widescreen-width: 1200px;
   }
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
     align-self: start;
   }
 }
@@ -166,6 +209,14 @@ $widescreen-width: 1200px;
     font-size: 13px;
     line-height: 20px;
   }
+
+  @media (min-width: $widescreen-width) {
+    width: 160px;
+    height: 40px;
+
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 
 .first-advertisement-button{
@@ -193,5 +244,11 @@ $widescreen-width: 1200px;
     width: 455px;
     height: 332px;
     margin: 0 0 0 30px;
+  }
+
+  @media (min-width: $widescreen-width) {
+    width: 458px;
+    height: 380px;
+    margin: 0 0 0 0;
   }
 }

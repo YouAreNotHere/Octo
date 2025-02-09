@@ -25,6 +25,11 @@ $widescreen-width: 1200px;
     width: 940px;
     margin-bottom: 80px;
   }
+
+  @media (min-width: $widescreen-width) {
+    width: 1140px;
+    margin-bottom: 100px;
+  }
 }
 
 .slider__button{
