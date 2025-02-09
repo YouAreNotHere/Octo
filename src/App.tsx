@@ -10,6 +10,7 @@ import useWindowSize from "./shared/UseWindowSize.tsx";
 
 function App() {
     const [isAnimating, setIsAnimating] = useState(false);
+    const [slideDirection, setSlideDirection] = useState("");
 
     class Initial {
         constructor(articleNumber: string, sectionName: string = "Category | Marketing") {
@@ -30,7 +31,6 @@ function App() {
     const fifthArticle = new Initial("fifth");
     const sixthArticle = new Initial("sixth", "Category");
     const seventhArticle = new Initial("seventh");
-    // const eighthArticle = new Initial("eighth");
 
     const smallScreenInitialState = [firstArticle, thirdArticle, fourthArticle, seventhArticle];
     const largeScreenInitialState = [
@@ -60,6 +60,7 @@ function App() {
               currentLeftArticle={currentLeftArticle}
               setCurrentLeftArticle={setCurrentLeftArticle}
               setIsAnimating={setIsAnimating}
+              setSlideDirection={setSlideDirection}
           />
       </>
   )

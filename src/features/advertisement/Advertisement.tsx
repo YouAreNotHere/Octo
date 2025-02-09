@@ -20,12 +20,32 @@ const Advertisement = () => {
                         </button>
                     </div>
                 </div>
-                <img
-                    className='advertisement-img'
-                    src='../../src/assets/AdvertisementBackground.jpg'
-                    width='inherit'
-                    height='auto'
-                />
+                <picture>
+                    <source
+                        media="(min-width:1200px)"
+                        srcSet='../../src/assets/AdvertisementBackground@5.jpg'
+                        width="458"
+                        height="380"/>
+                    <source media="(min-width:992px)"
+                            srcSet='../../src/assets/AdvertisementBackground@4.jpg'
+                            width="455"
+                            height="332"/>
+                    <source media="(min-width:768px)"
+                            srcSet='../../src/assets/AdvertisementBackground@3.jpg'
+                            width="596"
+                            height="364"/>
+                    <source media="(min-width:576px)"
+                            srcSet='../../src/assets/AdvertisementBackground@2.jpg'
+                            width="450"
+                            height="275"/>
+                    <img
+                        className='advertisement-img'
+                        src='../../src/assets/AdvertisementBackground.jpg'
+                        width='inherit'
+                        height='auto'
+                        alt='advertisement image'
+                    />
+                </picture>
             </section>
         </div>
     )

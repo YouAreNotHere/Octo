@@ -2,16 +2,16 @@ import './Slider.scss'
 import ArticleI from "../types/ArticleI.ts";
 import * as React from "react";
 import useWindowSize from "../../shared/UseWindowSize.tsx";
-import {useState, useEffect} from "react";
 
 interface Props{
     articles: ArticleI[],
     currentLeftArticle: number,
     setCurrentLeftArticle: React.Dispatch<React.SetStateAction<number>>,
     setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>,
+    setSlideDirection?: React.Dispatch<React.SetStateAction<string>>,
 }
 
-const Slider = ({articles, currentLeftArticle, setCurrentLeftArticle, setIsAnimating}: Props) => {
+const Slider = ({articles, currentLeftArticle, setCurrentLeftArticle, setIsAnimating,}: Props) => {
 
     const { width } = useWindowSize();
     const currentLocker = width < 1200 ? 2 : 3;
@@ -48,7 +48,6 @@ const Slider = ({articles, currentLeftArticle, setCurrentLeftArticle, setIsAnima
         setCurrentLeftArticle((prevNumber) => prevNumber + 1)
         setIsAnimating(true)
     }
-    console.log(`isRightButtonDisabled ${isRightButtonDisabled} isLeftButtonDisabled ${isLeftButtonDisabled } 2`)
 
     return(
         <div className="slider">

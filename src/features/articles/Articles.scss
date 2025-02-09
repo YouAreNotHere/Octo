@@ -476,21 +476,3 @@ $widescreen-width: 1200px;
   transform: translateX(324%);
   opacity: 0;
 }
-
-.recommended-article-list.animating .card.left {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-.recommended-article-list.animating .card.center {
-  transform: translateX(-100%);
-}
-
-.recommended-article-list.animating .card.right {
-  transform: translateX(0%);
-}
-
-.recommended-article-list.animating .card.new {
-  transform: translateX(100%);
-  opacity: 1;
-}

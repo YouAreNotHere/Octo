@@ -12,7 +12,6 @@ interface Props{
 }
 
 const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: Props) => {
-    // const [visibleArticles, setVisibleArticles] = useState([]);
 
     class Initial {
 
@@ -42,9 +41,9 @@ const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: 
         firstArticle, secondArticle, thirdArticle, fourthArticle, fifthArticle, sixthArticle, eighthArticle];
 
     const { width } = useWindowSize();
-    const initialState = width > 1200 ? largeScreenInitialState : smallScreenInitialState;
-    const [articles, setArticle] = useState([...initialState]);
-    const visibleCount = width < 768 ? 2 : 3; // 2 карточки на узких экранах, 3 — на широких
+    const initialState = width > 1199 ? largeScreenInitialState : smallScreenInitialState;
+    const [articles] = useState([...initialState]);
+    const visibleCount = width < 768 ? 2 : 3;
     const visibleArticles = [];
 
     for (let i = 0; i < visibleCount + 1; i++) {
@@ -58,8 +57,8 @@ const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: 
         if (isAnimating) {
             // Запускаем анимацию выхода
             const timeout = setTimeout(() => {
-                setIsAnimating(false); // Завершаем анимацию
-            }, 500); // Длительность анимации в миллисекундах
+                setIsAnimating(false);
+            }, 500);
             return () => clearTimeout(timeout);
         }
     }, [isAnimating]);

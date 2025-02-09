@@ -1,7 +1,6 @@
 import ArticleI from "../types/ArticleI.ts";
 import ArticleItem from "./ArticleItem.tsx";
 import './Articles.scss'
-import * as React from "react";
 
 interface Props{
     articles: ArticleI[], 
