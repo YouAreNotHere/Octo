@@ -3,8 +3,8 @@ $tablet-width: 768px;
 $desktop-width: 992px;
 $widescreen-width: 1200px;
 
-.first-article-list,
-.second-article-list{
+.article-list,
+.recommended-article-list{
   margin: 0 0 50px 0;
   display: grid;
   gap: 30px;
@@ -35,32 +35,35 @@ $widescreen-width: 1200px;
   }
 }
 
-.first-article-list li:nth-child(3),
-.first-article-list li:nth-child(4),
-.first-article-list li:nth-child(7),
-.second-article-list li:nth-child(2),
-.second-article-list li:nth-child(3),
-.second-article-list li:nth-child(4),
-.second-article-list li:nth-child(5),
-.second-article-list li:nth-child(6){
-  display: none;
-}
+//.article-list li:nth-child(3),
+//.article-list li:nth-child(4),
+//.article-list li:nth-child(7),
+//.recommended-article-list li:nth-child(2),
+//.recommended-article-list li:nth-child(3),
+//.recommended-article-list li:nth-child(4),
+//.recommended-article-list li:nth-child(5),
+//.recommended-article-list li:nth-child(6){
+//  display: none;
+//}
 
-.first-article-list li:nth-child(3),
-.first-article-list li:nth-child(4),
-.second-article-list li:nth-child(2){
-  @media (min-width: $note-width) {
-    display: flex;
-  }
-}
+//.article-list li:nth-child(3),
+//.article-list li:nth-child(4),
+//.recommended-article-list li:nth-child(2){
+//  @media (min-width: $note-width) {
+//    display: flex;
+//  }
+//}
 
-//.second-article-list li:nth-child(3){
+//.recommended-article-list li:nth-child(3){
 //  @media (min-width: $desktop-width) {
 //    display: none;
 //  }
 //}
 
-.second-article-list{
+.recommended-article-list{
+
+  transition: transform 0.5s ease-in-out;
+
   @media (min-width: $note-width) {
     margin-bottom: 20px;
   }
@@ -74,6 +77,10 @@ $widescreen-width: 1200px;
   }
 }
 
+.recommended-article-list.slide-out {
+  transform: translateX(-33%);
+}
+
 .article{
   width: 290px;
   margin: 0 auto;
@@ -81,6 +88,8 @@ $widescreen-width: 1200px;
   border: 0.1px #D3D8E4 solid;
   position: relative;
   box-sizing: border-box;
+
+  flex: 0 0 calc(33.333% - 16px);
 
   @media (min-width: $note-width) {
     width: 258px;
