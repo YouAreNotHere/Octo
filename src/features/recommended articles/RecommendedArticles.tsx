@@ -12,7 +12,7 @@ interface Props{
 }
 
 const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: Props) => {
-    const [visibleArticles, setVisibleArticles] = useState([]);
+    // const [visibleArticles, setVisibleArticles] = useState([]);
 
     class Initial {
 
@@ -44,17 +44,15 @@ const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: 
     const { width } = useWindowSize();
     const initialState = width > 1200 ? largeScreenInitialState : smallScreenInitialState;
     const [articles, setArticle] = useState([...initialState]);
+    const visibleCount = width < 768 ? 2 : 3; // 2 карточки на узких экранах, 3 — на широких
+    const visibleArticles = [];
 
-    useEffect(() => {
-        if (!isAnimating) {
-            // Если анимация не запущена, обновляем видимые карточки
-            const newVisibleArticles = articles.filter(
-                (article, index) =>
-                    index <= currentLeftArticle + 2 && index >= currentLeftArticle
-            );
-            setVisibleArticles(newVisibleArticles);
-        }
-    }, [currentLeftArticle, articles, isAnimating]);
+    for (let i = 0; i < visibleCount + 1; i++) {
+        visibleArticles.push(
+            articles[(currentLeftArticle + i) % articles.length]
+        );
+    }
+
 
     useEffect(() => {
         if (isAnimating) {
@@ -66,12 +64,16 @@ const RecommendedArticles = ({currentLeftArticle, isAnimating, setIsAnimating}: 
         }
     }, [isAnimating]);
 
-
-
     return (
         <ul className={`recommended-article-list ${isAnimating ? "slide-out" : ""}`}>
-            {visibleArticles.map((article: ArticleI) => {
-                return (<li key={article.articleNumber}>
+            {visibleArticles.map((article: ArticleI, index) => {
+                return (
+                    <li
+                        key={article.articleNumber}
+                        className={`card ${index === 0 ? "left" : ""} ${
+                            index === 1 ? "center" : ""
+                        } ${index === 2 ? "right" : ""} ${index === 3 ? "new" : ""}`}
+                    >
                     <ArticleItem
                         articleNumber={article.articleNumber}
                         sectionName={article.sectionName}

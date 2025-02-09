@@ -7,7 +7,7 @@ $widescreen-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 20px 0 50px 0;
 
   @media (min-width: $note-width) {
     justify-content: start;
@@ -32,7 +32,8 @@ $widescreen-width: 1200px;
   }
 }
 
-.slider__button{
+.slider__button,
+.disablet__button{
   width: 11px;
   height: 22px;
   background-color: transparent;
@@ -46,12 +47,18 @@ $widescreen-width: 1200px;
   }
 }
 
-.slider__button svg{
+.slider__button svg,
+.disablet__button svg{
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.slider__button:nth-child(1){
+.slider__button:nth-child(1),
+.disablet__button:nth-child(1){
   margin: 0 18px 0 0;
+}
+
+.disablet__button{
+  opacity: 0.5;
 }

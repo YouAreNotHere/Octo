@@ -3,7 +3,8 @@ import "./Articles.scss"
 
 const ArticleItem = ({articleNumber, sectionName, authorName, articleHeader, articleText}: ArticleI) => {
     return(
-        <div className = 'article'>
+        // <div className = 'article'>
+            <>
             <h2 className = {articleNumber + '-section-name'}>
                 {sectionName}
             </h2>
@@ -20,7 +21,7 @@ const ArticleItem = ({articleNumber, sectionName, authorName, articleHeader, art
             <button className = {articleNumber + '-article-button'}>
                 Call to action
             </button>
-        </div>
+        </>
     )
 }
 

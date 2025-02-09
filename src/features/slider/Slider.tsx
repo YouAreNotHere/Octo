@@ -1,6 +1,8 @@
 import './Slider.scss'
 import ArticleI from "../types/ArticleI.ts";
 import * as React from "react";
+import useWindowSize from "../../shared/UseWindowSize.tsx";
+import {useState, useEffect} from "react";
 
 interface Props{
     articles: ArticleI[],
@@ -11,6 +13,26 @@ interface Props{
 
 const Slider = ({articles, currentLeftArticle, setCurrentLeftArticle, setIsAnimating}: Props) => {
 
+    const { width } = useWindowSize();
+    const currentLocker = width < 1200 ? 2 : 3;
+    let isLeftButtonDisabled = false;
+    let isRightButtonDisabled = false;
+
+        if (currentLeftArticle >= (articles.length - currentLocker)){
+            isRightButtonDisabled = true;
+        }else{
+            isRightButtonDisabled = false;
+        }
+
+        if (currentLeftArticle <= 0){
+            isLeftButtonDisabled = true;
+        }else{
+            isLeftButtonDisabled = false;
+        }
+
+
+
+
     const onClickLeftHandler = (): void => {
         if (currentLeftArticle <= 0) return;
         setCurrentLeftArticle((prevNumber)=> prevNumber - 1)
@@ -18,21 +40,34 @@ const Slider = ({articles, currentLeftArticle, setCurrentLeftArticle, setIsAnima
     }
 
     const onClickRightHandler = (): void => {
-        if (currentLeftArticle >= (articles.length - 3)) return;
+
+        if (currentLeftArticle >= (articles.length - currentLocker)) {
+            return;
+        }
+
         setCurrentLeftArticle((prevNumber) => prevNumber + 1)
         setIsAnimating(true)
     }
+    console.log(`isRightButtonDisabled ${isRightButtonDisabled} isLeftButtonDisabled ${isLeftButtonDisabled } 2`)
 
     return(
         <div className="slider">
-            <button className='slider__button' onClick={onClickLeftHandler}>
+            <button
+                className={isLeftButtonDisabled ? 'disablet__button' : 'slider__button'}
+                onClick={onClickLeftHandler}
+                disabled={isLeftButtonDisabled}
+            >
                 <picture>
                     <source media="(min-width:768px)" srcSet='../src/assets/LeftArrowTablet.svg' width="13px"
                             height="26px"/>
                     <img src='../src/assets/LeftArrow.svg' width="11" height="22" alt="left arrow"/>
                 </picture>
             </button>
-            <button className='slider__button' onClick={onClickRightHandler}>
+            <button
+                className={isRightButtonDisabled ? 'disablet__button' : 'slider__button'}
+                onClick={onClickRightHandler}
+                disabled={isRightButtonDisabled}
+            >
                 <picture>
                     <source media="(min-width:768px)" srcSet='../src/assets/RightArrowTablet.svg' width="13"
                             height="26"/>

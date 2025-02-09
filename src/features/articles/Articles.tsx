@@ -13,7 +13,7 @@ const Articles = ({articles}: Props) => {
     return (
         <ul className='article-list'>
             {articles.map((article: ArticleI) => {
-                return (<li key={article.articleNumber}>
+                return (<li key={article.articleNumber} className='article'>
                     <ArticleItem
                         articleNumber={article.articleNumber}
                         sectionName={article.sectionName}

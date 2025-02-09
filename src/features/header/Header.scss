@@ -22,7 +22,7 @@ $widescreen-width: 1200px;
 
   @media (min-width: $tablet-width) {
     height: 276px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     background-image: url('../../assets/HeaderBackground@3.jpg');
   }
 
@@ -88,9 +88,17 @@ $widescreen-width: 1200px;
     height: 96px;
   }
 
+  @media (min-width: $tablet-width) {
+    width: 470px;
+    height: 96px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 617px;
     height: 120px;
+
+    font-size: 54px;
+    line-height: 60px;
   }
 
   @media (min-width: $widescreen-width) {
