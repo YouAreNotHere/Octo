@@ -1,4 +1,4 @@
-@import '../../shared/styles/ variables';
+@import '../../shared/styles/variables';
 
 .article-list,
 .recommended-article-list{
@@ -109,7 +109,7 @@
   }
 }
 
-.article:hover {
+.article:hover, .card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -153,18 +153,8 @@
   }
 }
 
-.first-section-name,
-.second-section-name,
-.fifth-section-name,
-.seventh-section-name{
-  background-color: var(--light-blue);
-}
-
-.fourth-section-name,
-.third-section-name,
-.sixth-section-name,
-.eighth-section-name{
-  background-color: var(--dark-blue);
+.section-name{
+  background-color: var(--bg-button-color);
 }
 
 .article-img{
@@ -228,18 +218,8 @@
   }
 }
 
-.first-author-name,
-.second-author-name,
-.fifth-author-name,
-.seventh-author-name{
-  color: var(--light-blue);
-}
-
-.fourth-author-name,
-.third-author-name,
-.sixth-author-name,
-.eighth-author-name{
-  color: var(--dark-blue);
+.author-name{
+  color: var(--bg-button-colore);
 }
 
 .article-header{
@@ -363,16 +343,14 @@
   }
 }
 
-.first-article-button,
-.second-article-button,
-.fifth-article-button,
-.seventh-article-button{
-  background-color: var(--light-blue);
+.article-button{
+  background-color: var(--bg-button-color);
 }
 
-.fourth-article-button,
-.third-article-button,
-.sixth-article-button,
-.eighth-article-button{
-  background-color: var(--dark-blue);
+.add-articles__button{
+  width: 200px;
+  height: 50px;
+  background-color: var(--light-blue);
+  color: white;
+  margin-bottom: 50px;
 }

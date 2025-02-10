@@ -1,58 +1,45 @@
-import ArticleI from "../types/ArticleI.ts";
+import IArticle from "../../shared/types/IArticle.ts";
 import ArticleItem from "../../shared/ArticleItem.tsx";
 import './Articles.scss'
-import * as React from "react";
 
 interface Props{
-    articles: ArticleI[],
-    setArticle: React.Dispatch<React.SetStateAction<ArticleI[]>>,
+    articles: IArticle[],
+    setArticles: React.Dispatch<React.SetStateAction<IArticle[]>>,
+    isModalOpen: boolean,
+    setIsModalOpen:(isModalOpen:boolean) => void,
 }
 
-const Articles = ({articles, setArticle}: Props) => {
+const Articles = ({articles, setArticles, isModalOpen, setIsModalOpen}: Props) => {
     const onClickHandler = () => {
-        console.log(...articles)
-        setArticle([...articles, {
-            articleNumber: "first",
-            sectionName:"Category | Marketing",
-            authorName: "Adam Sendler",
-            articleHeader:"Solutions for people like you like people solutions for people like you like people",
-            articleText: "How can we help your technology and services business develop a revenue engine based…"}])
-        console.log(articles)
+        setIsModalOpen(!isModalOpen)
     }
 
     return (
-        // <ul className='article-list'>
-        //     {articles.map((article: ArticleI) => {
-        //         return (<li key={article.articleNumber} className='article'>
-        //             <ArticleItem
-        //                 articleNumber={article.articleNumber}
-        //                 sectionName={article.sectionName}
-        //                 authorName={article.authorName}
-        //                 articleHeader={article.articleHeader}
-        //                 articleText={article.articleText}
-        //             />
-        //         </li>)
-        //     })}
-        // </ul>
-        //
+            <ul className='article-list'>
+                {articles.map((article: IArticle) => {
+                    return (<li key={article.articleNumber} className='article'>
+                        <ArticleItem article = {article}/>
+                    </li>)
+                })}
+            </ul>
 
 
-    <div>
-        <ul className='article-list'>
-            {articles.map((article: ArticleI) => {
-                console.log(articles)
-                return (<li key={article.articleNumber} className='article'>
-                    <ArticleItem article = {article}/>
-                </li>)
-            })}
-        </ul>
-        <button
-            className='add-articles__button'
-            onClick={onClickHandler}
-        >
-            Добавить
-        </button>
-    </div>
+
+    // <div>
+    //     <ul className='article-list'>
+    //         {articles.map((article: IArticle) => {
+    //             return (<li key={article.articleNumber} className='article'>
+    //                 <ArticleItem article = {article}/>
+    //             </li>)
+    //         })}
+    //     </ul>
+    //     <button
+    //         className='add-articles__button'
+    //         onClick={onClickHandler}
+    //     >
+    //         Add article
+    //     </button>
+    // </div>
 
 )
 }

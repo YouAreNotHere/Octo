@@ -1,0 +1,99 @@
+@import "../../shared/styles/variables";
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00B6DD;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  margin: auto;
+  justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    width: 450px;
+    height: 600px;
+  }
+}
+
+.hidden-modal{
+  background-color: red;
+  display: none;
+  width: 100px;
+  height: 200px;
+}
+
+.modal-buttons-wrapper{
+  margin-top: 50px;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  margin: auto;
+}
+
+.modal-buttons-wrapper button{
+  width: 100px;
+  height: 50px;
+  z-index: 5;
+  background-color: #081580;
+  color: white;
+}
+
+.modal-buttons-wrapper button:nth-child(1){
+  margin-right: 30px;
+}
+
+.modal input,
+.modal textarea{
+  width: 90%;
+  margin: auto;
+}
+
+.choose-color-modal{
+  margin: auto;
+  width: 40%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+}
+
+.choose-color-modal button{
+  width: 30px;
+  height: 30px;
+}
+
+.hidden-wrapper{
+  display: none;
+}
+
+.choose-red__button{
+  background-color: red;
+}
+
+.choose-blue__button{
+  background-color: blue;
+}
+
+.choose-orange__button{
+  background-color: darkorange;
+}
+
+.choose-green__button{
+  background-color: green;
+}
+
+.choose-black__button{
+  background-color: black;
+}
+
+.choose-violet__button{
+  background-color: plum;
+}

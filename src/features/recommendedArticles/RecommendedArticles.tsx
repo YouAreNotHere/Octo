@@ -1,28 +1,27 @@
 import {useEffect} from "react";
-import ArticleI from "../types/ArticleI.ts";
+import IArticle from "../../shared/types/IArticle.ts";
 import ArticleItem from "../../shared/ArticleItem.tsx";
 import '../articles/Articles.scss'
 import './RecommendedArticles.scss'
-import * as React from "react";
 
 interface Props{
-    CurrentMiddleArticle: number,
+    currentMiddleArticle: number,
     isAnimating: boolean,
     setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>,
-    articles: ArticleI[],
+    articles: IArticle[],
 }
 
-const RecommendedArticles = ({CurrentMiddleArticle, isAnimating, setIsAnimating, articles}: Props) => {
+const RecommendedArticles = ({currentMiddleArticle, isAnimating, setIsAnimating, articles}: Props) => {
 
-    const isStartOfSlider = CurrentMiddleArticle === 1;
+    const isStartOfSlider = currentMiddleArticle === 1;
     let visibleArticles;
     if (isStartOfSlider){
         visibleArticles = articles.filter((article, index) => {
-            return index >= (CurrentMiddleArticle - 1) && index <= (CurrentMiddleArticle + 2)
+            return index >= (currentMiddleArticle - 1) && index <= (currentMiddleArticle + 2)
         })
     }else{
         visibleArticles = articles.filter((article, index) => {
-            return index >= (CurrentMiddleArticle - 2) && index <= (CurrentMiddleArticle + 2)
+            return index >= (currentMiddleArticle - 2) && index <= (currentMiddleArticle + 2)
         })
     }
 
@@ -54,15 +53,14 @@ const RecommendedArticles = ({CurrentMiddleArticle, isAnimating, setIsAnimating,
 
     return (
         <ul className={`recommended-article-list`}>
-            {visibleArticles.map((article: ArticleI, index) => {
-                return (
+            {visibleArticles.map((article: IArticle, index) => (
                     <li
                         key={article.articleNumber}
                         className={`card ${getCardClass(index)}`}
                     >
                     <ArticleItem article={article}/>
-                </li>)
-            })}
+                </li>
+            ))}
         </ul>
     )
 }
