@@ -32,6 +32,22 @@ $widescreen-width: 1200px;
 
 button{
   border: none;
+
+  :hover{
+    opacity: 0.8;
+  }
+
+  :active{
+    opacity: 0.5;
+  }
+}
+
+body .article-button:hover {
+  opacity: 0.8;
+}
+
+body .article-button:active {
+  opacity: 0.5;
 }
 
 ul{

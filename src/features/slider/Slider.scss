@@ -1,7 +1,4 @@
-$note-width: 576px;
-$tablet-width: 768px;
-$desktop-width: 992px;
-$widescreen-width: 1200px;
+@import '../../shared/styles/ variables';
 
 .slider{
   display: flex;
@@ -33,7 +30,7 @@ $widescreen-width: 1200px;
 }
 
 .slider__button,
-.disablet__button{
+.disable__button{
   width: 11px;
   height: 22px;
   background-color: transparent;
@@ -41,24 +38,25 @@ $widescreen-width: 1200px;
   border: none;
   padding: 0;
 
+}
+
+.slider__button svg,
+.disable__button svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+
   @media (min-width: $tablet-width) {
     width: 13px;
     height: 26px;
   }
 }
 
-.slider__button svg,
-.disablet__button svg{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .slider__button:nth-child(1),
-.disablet__button:nth-child(1){
+.disable__button:nth-child(1){
   margin: 0 18px 0 0;
 }
 
-.disablet__button{
+.disable__button{
   opacity: 0.5;
 }
