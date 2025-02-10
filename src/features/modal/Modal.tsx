@@ -19,7 +19,6 @@ const Modal = ({isModalOpen, setIsModalOpen, articles, setArticles}:Props) =>{
     const inputTagRef = useRef<HTMLInputElement>(null);
     const inputAuthorRef = useRef<HTMLInputElement>(null);
     const titleTextRef = useRef<HTMLInputElement>(null);
-    const textInputRef = useRef<HTMLInputElement>(null);
     const [isWrapperOpen, setIsWrapperOpen] = useState(true);
 
     const onSaveHandler = () => {
@@ -80,7 +79,6 @@ const Modal = ({isModalOpen, setIsModalOpen, articles, setArticles}:Props) =>{
                 className="modal-text__input"
             />
             <textarea
-                ref={textInputRef}
                 value={text}
                 placeholder="text"
                 onChange={(e) => setText(e.target.value)}

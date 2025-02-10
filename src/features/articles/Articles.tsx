@@ -9,10 +9,7 @@ interface Props{
     setIsModalOpen:(isModalOpen:boolean) => void,
 }
 
-const Articles = ({articles, setArticles, isModalOpen, setIsModalOpen}: Props) => {
-    const onClickHandler = () => {
-        setIsModalOpen(!isModalOpen)
-    }
+const Articles = ({articles}: Props) => {
 
     return (
             <ul className='article-list'>
@@ -22,26 +19,30 @@ const Articles = ({articles, setArticles, isModalOpen, setIsModalOpen}: Props) =
                     </li>)
                 })}
             </ul>
-
-
-
-    // <div>
-    //     <ul className='article-list'>
-    //         {articles.map((article: IArticle) => {
-    //             return (<li key={article.articleNumber} className='article'>
-    //                 <ArticleItem article = {article}/>
-    //             </li>)
-    //         })}
-    //     </ul>
-    //     <button
-    //         className='add-articles__button'
-    //         onClick={onClickHandler}
-    //     >
-    //         Add article
-    //     </button>
-    // </div>
-
 )
 }
+
+// const Articles = ({articles, isModalOpen, setIsModalOpen}: Props) => {
+//     const onClickHandler = () => {
+//         setIsModalOpen(!isModalOpen)
+//     }
+//     return (
+//         <div>
+//             <ul className='article-list'>
+//                 {articles.map((article: IArticle) => {
+//                     return (<li key={article.articleNumber} className='article'>
+//                         <ArticleItem article = {article}/>
+//                     </li>)
+//                 })}
+//             </ul>
+//             <button
+//                 className='add-articles__button'
+//                 onClick={onClickHandler}
+//             >
+//                 Add article
+//             </button>
+//         </div>
+//     )
+// }
 
 export default Articles;

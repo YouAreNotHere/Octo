@@ -16,11 +16,11 @@ const RecommendedArticles = ({currentMiddleArticle, isAnimating, setIsAnimating,
     const isStartOfSlider = currentMiddleArticle === 1;
     let visibleArticles;
     if (isStartOfSlider){
-        visibleArticles = articles.filter((article, index) => {
+        visibleArticles = articles.filter((_article, index) => {
             return index >= (currentMiddleArticle - 1) && index <= (currentMiddleArticle + 2)
         })
     }else{
-        visibleArticles = articles.filter((article, index) => {
+        visibleArticles = articles.filter((_article, index) => {
             return index >= (currentMiddleArticle - 2) && index <= (currentMiddleArticle + 2)
         })
     }
