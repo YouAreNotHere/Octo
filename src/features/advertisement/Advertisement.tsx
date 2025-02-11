@@ -1,9 +1,9 @@
 import "./Advertisement.scss";
-import AdvertisementBackground from '@/assets/AdvertisementBackground.jpg';
-import AdvertisementBackground2 from '@/assets/AdvertisementBackground@2.jpg';
-import AdvertisementBackground3 from '@/assets/AdvertisementBackground@3.jpg';
-import AdvertisementBackground4 from '@/assets/AdvertisementBackground@4.jpg';
-import AdvertisementBackground5 from '@/assets/AdvertisementBackground@5.jpg';
+import AdvertisementBackground from '../../assets/AdvertisementBackground.jpg';
+import AdvertisementBackground2 from '../../assets/AdvertisementBackground@2.jpg';
+import AdvertisementBackground3 from '../../assets/AdvertisementBackground@3.jpg';
+import AdvertisementBackground4 from '../../assets/AdvertisementBackground@4.jpg';
+import AdvertisementBackground5 from '../../assets//AdvertisementBackground@5.jpg';
 
 const Advertisement = () => {
     return(
