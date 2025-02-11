@@ -1,5 +1,5 @@
-import IArticle from "../../shared/types/IArticle.ts";
-import ArticleItem from "../../shared/ArticleItem.tsx";
+import IArticle from "@/shared/types/IArticle.ts";
+import ArticleItem from "@/shared/ArticleItem.tsx";
 import './Articles.scss'
 
 interface Props{

@@ -1,6 +1,6 @@
 import './Slider.scss'
-import IArticle from "../../shared/types/IArticle.ts";
-import useWindowSize from "../../shared/UseWindowSize.ts";
+import IArticle from "@/shared/types/IArticle.ts";
+import useWindowSize from "@/shared/UseWindowSize.ts";
 
 interface Props{
     articles: IArticle[],

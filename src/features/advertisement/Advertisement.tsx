@@ -1,4 +1,9 @@
 import "./Advertisement.scss";
+import AdvertisementBackground from '@/assets/AdvertisementBackground.jpg';
+import AdvertisementBackground2 from '@/assets/AdvertisementBackground@2.jpg';
+import AdvertisementBackground3 from '@/assets/AdvertisementBackground@3.jpg';
+import AdvertisementBackground4 from '@/assets/AdvertisementBackground@4.jpg';
+import AdvertisementBackground5 from '@/assets/AdvertisementBackground@5.jpg';
 
 const Advertisement = () => {
     return(
@@ -23,24 +28,24 @@ const Advertisement = () => {
                 <picture>
                     <source
                         media="(min-width:1200px)"
-                        srcSet='../../src/assets/AdvertisementBackground@5.jpg'
+                        srcSet={AdvertisementBackground5}
                         width="458"
                         height="380"/>
                     <source media="(min-width:992px)"
-                            srcSet='../../src/assets/AdvertisementBackground@4.jpg'
+                            srcSet={AdvertisementBackground4}
                             width="455"
                             height="332"/>
                     <source media="(min-width:768px)"
-                            srcSet='../../src/assets/AdvertisementBackground@3.jpg'
+                            srcSet={AdvertisementBackground3}
                             width="596"
                             height="364"/>
                     <source media="(min-width:576px)"
-                            srcSet='../../src/assets/AdvertisementBackground@2.jpg'
+                            srcSet={AdvertisementBackground2}
                             width="450"
                             height="275"/>
                     <img
                         className='advertisement-img'
-                        src='../../src/assets/AdvertisementBackground.jpg'
+                        src={AdvertisementBackground}
                         width='inherit'
                         height='auto'
                         alt='advertisement image'

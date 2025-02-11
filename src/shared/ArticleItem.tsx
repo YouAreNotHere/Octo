@@ -1,5 +1,5 @@
 import IArticle from "./types/IArticle.ts";
-import "../features/articles/Articles.scss"
+import "@/features/articles/Articles.scss"
 
 const ArticleItem = ({article}: { article: IArticle }) => {
     const {articleNumber,

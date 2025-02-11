@@ -1,7 +1,7 @@
 import {useEffect} from "react";
-import IArticle from "../../shared/types/IArticle.ts";
-import ArticleItem from "../../shared/ArticleItem.tsx";
-import '../articles/Articles.scss'
+import IArticle from "@/shared/types/IArticle.ts";
+import ArticleItem from "@/shared/ArticleItem.tsx";
+import '@/features/articles/Articles.scss'
 import './RecommendedArticles.scss'
 
 interface Props{

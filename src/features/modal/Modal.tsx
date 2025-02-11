@@ -1,6 +1,5 @@
 import {useState, useRef} from "react";
-import IArticle from "../../shared/types/IArticle.ts";
-import * as React from "react";
+import IArticle from "@/shared/types/IArticle.ts";
 import "./Modal.scss"
 
 interface Props{
